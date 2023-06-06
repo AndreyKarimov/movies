@@ -21,13 +21,25 @@
                                 <button class="add-movie-btn">Add movie</button>
                                 <button class="cancel-add-movie-btn"></button>
                             </div>
-                            <ul class="add-movie__form display-none">
+                            <ul class="add-movie__form "> <!-- display-none -->
                                 <li class="add-movie__form-item">
-                                    <input id="movieTitle" type="text" placeholder="Title"></li>
+                                    <input 
+                                        class="movieTitle red" 
+                                        id="movieTitle" 
+                                        type="text" 
+                                        placeholder="Title">
+                                </li>
                                 <li class="add-movie__form-item">
-                                    <input id="movieYear" type="number" max="9999" min="1900" placeholder="Year of production"></li>
+                                    <input 
+                                        class="movieYear" 
+                                        id="movieYear" 
+                                        type="number" 
+                                        max="9999" 
+                                        min="1900" 
+                                        placeholder="Year of production">
+                                </li>
                                 <li class="add-movie__form-item">
-                                    <select id="movieCategory" class="movie-category">
+                                    <select id="movieCategory" class="movie-category ">
                                         <option value="Null" disabled selected hidden>Category</option>
                                         <option value="0">Horror</option>
                                         <option value="1">Drama</option>
