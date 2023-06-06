@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="shortcut icon" href="/resouses/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800" rel="stylesheet" />
+    <title>movies</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="main__inner">
+                <h1>Movie list</h1>
+                <section class="movies">
+                    <div class="add-movie block">
+                        <div class="add-movie__inner">
+                            <div class="add-movie-btn--wrapper">
+                                <button class="add-movie-btn">Add movie</button>
+                                <button class="cancel-add-movie-btn"></button>
+                            </div>
+                            <ul class="add-movie__form display-none">
+                                <li class="add-movie__form-item">
+                                    <input id="movieTitle" type="text" placeholder="Title"></li>
+                                <li class="add-movie__form-item">
+                                    <input id="movieYear" type="number" max="9999" min="1900" placeholder="Year of production"></li>
+                                <li class="add-movie__form-item">
+                                    <select id="movieCategory" class="movie-category">
+                                        <option value="Null" disabled selected hidden>Category</option>
+                                        <option value="0">Horror</option>
+                                        <option value="1">Drama</option>
+                                        <option value="2">Comedy</option>
+                                        <option value="3">Melodrama</option>
+                                        <option value="4">Action</option>
+                                        <option value="5">Thriller</option>
+                                    </select>
+                                </li>
+                                <li class="add-movie__form-item">
+                                    <select id="movieCountry" class="movie-country">
+                                        <option value="Null" disabled selected hidden>Country</option>
+                                        <option value="0">Россия</option>
+                                        <option value="1">США</option>
+                                        <option value="2">Великобритания</option>
+                                        <option value="3">Ирландия</option>
+                                        <option value="4">Нижерланды</option>
+                                    </select>
+                                </li>
+                                <li class="add-movie__form-item">
+                                    <input class="confirm-btn" type="button" value="Add">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movie-list block">
+                        <div class="movie-item">
+                            <button class="movie-item__watched-btn movie-item__watched-btn--active"></button>
+                            <div class="movie-item__desc">
+                                <div class="movie-item__title">Название фильма</div>
+                                <div class="movie-item__additional-features">
+                                    <span class="movie-item__year">2022</span>
+                                    <span class="movie-item__director">Джеймс Кэмерон</span>
+                                    <span class="movie-item__category">Мелодрамма</span>
+                                </div>
+                            </div>
+                            <button class="movie-item__delete-btn"></button>
+                        </div>
+                        <div class="movie-item">
+                            <button class="movie-item__watched-btn "></button>
+                            <div class="movie-item__desc">
+                                <div class="movie-item__title">Название фильма</div>
+                                <div class="movie-item__additional-features">
+                                    <span class="movie-item__year">2022</span>
+                                    <span class="movie-item__director">Джеймс Кэмерон</span>
+                                    <span class="movie-item__category">Мелодрамма</span>
+                                </div>
+                            </div>
+                            <button class="movie-item__delete-btn"></button>
+                        </div>
+                        <div class="movie-item">
+                            <button class="movie-item__watched-btn "></button>
+                            <div class="movie-item__desc">
+                                <div class="movie-item__title">Название фильма</div>
+                                <div class="movie-item__additional-features">
+                                    <span class="movie-item__year">2022</span>
+                                    <span class="movie-item__director">Джеймс Кэмерон</span>
+                                    <span class="movie-item__category">Мелодрамма</span>
+                                </div>
+                            </div>
+                            <button class="movie-item__delete-btn"></button>
+                        </div>
+                        <div class="movie-item">
+                            <button class="movie-item__watched-btn "></button>
+                            <div class="movie-item__desc">
+                                <div class="movie-item__title">Название фильма</div>
+                                <div class="movie-item__additional-features">
+                                    <span class="movie-item__year">2022</span>
+                                    <span class="movie-item__director">Джеймс Кэмерон</span>
+                                    <span class="movie-item__category">Мелодрамма</span>
+                                </div>
+                            </div>
+                            <button class="movie-item__delete-btn"></button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>

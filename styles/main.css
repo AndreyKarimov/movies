@@ -1,0 +1,224 @@
+@import url(../styles/reset.css);
+
+body {
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: -0.03em;
+    background: #F5F5F5;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 42px;
+    color: #191D23;
+    letter-spacing: 0.1em;
+}
+
+input, button, select, option {
+    font-style: inherit;
+}
+
+input:focus-visible, 
+button:focus-visible, 
+select:focus-visible, 
+option:focus-visible {
+    outline: unset;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 80px 15px 0;
+    max-width: 760px;
+    width: 100%;
+}
+
+
+@media (max-width: 759px) {
+    .container {
+        padding: 80px 10px 0;
+        width: 100%;
+        min-width: 378px;
+    }
+}
+
+
+.block {
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 24px 16px;
+}
+
+.main__inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 50px;
+}
+
+.movies {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 30px;
+}
+.add-movie {
+    width: 100%;
+}
+.add-movie__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+}
+
+.add-movie-btn--wrapper {
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.add-movie-btn {
+    padding-left: 25px;
+    position: relative;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #047857;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.add-movie-btn:before {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 0;
+    content: '';
+    background-image: url(../resouses/add-movie-btn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cancel-add-movie-btn {
+    background-color: inherit;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #D0D5DD;
+    border-radius: 4px;
+    background-image: url(../resouses/cancel-btn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+}
+
+
+
+.add-movie__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.display-none {
+    display: none;
+}
+
+.add-movie__form-item, 
+.add-movie__form-item input,
+.add-movie__form-item button,
+.add-movie__form-item select {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+
+}
+
+.movie-category:not(:focus), .movie-country:not(:focus) {
+    color: gray;
+}
+
+.confirm-btn {
+    width: 100%;
+    height: 100%;
+
+    background: #047857;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+.movie-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+
+
+
+.movie-item {
+    display: grid;
+    flex-direction: row;
+    column-gap: 10px;
+    grid-template-columns: 35px auto 35px;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.movie-item__watched-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #047857;
+    border-radius: 35px;
+    background-color: #FFFFFF;
+}
+
+.movie-item__watched-btn--active {
+    background-color: #047857;
+    background-image: url(../resouses/watched-btn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.movie-item__desc {
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #191D23;
+    justify-self: start;
+}
+
+.movie-item__additional-features {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: flex-start;
+
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: #64748B;
+}
+
+.movie-item__delete-btn {
+    background-color: inherit;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #D0D5DD;
+    border-radius: 4px;
+    background-image: url(../resouses/cancel-btn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
