@@ -1,5 +1,10 @@
-function movie() {
-  console.log("work is done");
+class Movie {
+  constructor(title, year, category, country) {
+    this.title = title;
+    this.year = year;
+    this.category = category;
+    this.country = country;
+  }
 }
 
-export default movie;
+export default Movie;

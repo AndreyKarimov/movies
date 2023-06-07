@@ -18,10 +18,10 @@
                     <div class="add-movie block">
                         <div class="add-movie__inner">
                             <div class="add-movie-btn--wrapper">
-                                <button class="add-movie-btn">Add movie</button>
-                                <button class="cancel-add-movie-btn"></button>
+                                <button id="addMovieBtn" class="add-movie-btn">Add movie</button>
+                                <button id="cancelAddMovieBtn" class="cancel-add-movie-btn"></button>
                             </div>
-                            <ul class="add-movie__form "> <!-- display-none -->
+                            <ul id="addMovieForm" class="add-movie__form "> <!-- display-none -->
                                 <li class="add-movie__form-item">
                                     <input 
                                         class="movieTitle red" 
@@ -51,7 +51,7 @@
                                 </li>
                                 <li class="add-movie__form-item">
                                     <select id="movieCountry" class="movie-country">
-                                        <option value="Null" disabled selected hidden>Country</option>
+                                        <option value="" disabled selected hidden>Country</option>
                                         <option value="0">Россия</option>
                                         <option value="1">США</option>
                                         <option value="2">Великобритания</option>
@@ -60,23 +60,23 @@
                                     </select>
                                 </li>
                                 <li class="add-movie__form-item">
-                                    <input class="confirm-btn" type="button" value="Add">
+                                    <input id="confirmBtn" class="confirm-btn" type="button" value="Add">
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="movie-list block">
                         <div class="movie-item">
-                            <button class="movie-item__watched-btn movie-item__watched-btn--active"></button>
+                            <button id="movieWatcedBtn" class="movie-item__watched-btn movie-item__watched-btn--active"></button>
                             <div class="movie-item__desc">
-                                <div class="movie-item__title">Название фильма</div>
+                                <div id="movieItemTitle" class="movie-item__title">Название фильма</div>
                                 <div class="movie-item__additional-features">
-                                    <span class="movie-item__year">2022</span>
-                                    <span class="movie-item__director">Джеймс Кэмерон</span>
-                                    <span class="movie-item__category">Мелодрамма</span>
+                                    <span id="movieItemYear" class="movie-item__year">2022</span>
+                                    <span id="movieItemDirector" class="movie-item__director">Джеймс Кэмерон</span>
+                                    <span id="movieItemCategory" class="movie-item__category">Мелодрамма</span>
                                 </div>
                             </div>
-                            <button class="movie-item__delete-btn"></button>
+                            <button id="movieItemDelete" class="movie-item__delete-btn"></button>
                         </div>
                         <div class="movie-item">
                             <button class="movie-item__watched-btn "></button>
