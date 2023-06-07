@@ -21,10 +21,10 @@
                                 <button id="addMovieBtn" class="add-movie-btn">Add movie</button>
                                 <button id="cancelAddMovieBtn" class="cancel-add-movie-btn"></button>
                             </div>
-                            <ul id="addMovieForm" class="add-movie__form "> <!-- display-none -->
+                            <ul id="addMovieForm" class="add-movie__form display-none"> 
                                 <li class="add-movie__form-item">
                                     <input 
-                                        class="movieTitle red" 
+                                        class="movieTitle" 
                                         id="movieTitle" 
                                         type="text" 
                                         placeholder="Title">
@@ -40,7 +40,7 @@
                                 </li>
                                 <li class="add-movie__form-item">
                                     <select id="movieCategory" class="movie-category ">
-                                        <option value="Null" disabled selected hidden>Category</option>
+                                        <option value="" disabled selected hidden>Category</option>
                                         <option value="0">Horror</option>
                                         <option value="1">Drama</option>
                                         <option value="2">Comedy</option>
@@ -61,6 +61,9 @@
                                 </li>
                                 <li class="add-movie__form-item">
                                     <input id="confirmBtn" class="confirm-btn" type="button" value="Add">
+                                </li>
+                                <li class="add-movie__form-item">
+                                    <input id="ClearFormBtn" class="clear-form-btn" type="button" value="Clear form">
                                 </li>
                             </ul>
                         </div>

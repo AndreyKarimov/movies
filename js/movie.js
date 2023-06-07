@@ -4,6 +4,7 @@ class Movie {
     this.year = year;
     this.category = category;
     this.country = country;
+    this.watched = 0;
   }
 }
 
