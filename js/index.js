@@ -7,9 +7,13 @@ const addMovieFormNode = document.getElementById("addMovieForm");
 const movieTitleNode = document.getElementById("movieTitle");
 const movieYearNode = document.getElementById("movieYear");
 const movieCategoryNode = document.getElementById("movieCategory");
+const newCategoryBtnNode = document.getElementById("newCategoryBtn");
+const newCategoryNode = document.getElementById("newCategory");
+const newCountryBtnNode = document.getElementById("newcountryBtn");
+const newCountryNode = document.getElementById("newCountry");
 const movieCountryNode = document.getElementById("movieCountry");
 const confirmBtnNode = document.getElementById("confirmBtn");
-const ClearFormBtnNode = document.getElementById("ClearFormBtn");
+const clearFormBtnNode = document.getElementById("ClearFormBtn");
 const movieWatcedBtnNode = document.getElementById("movieWatcedBtn");
 const movieItemTitle = document.getElementById("movieItemTitle");
 const movieItemYearNode = document.getElementById("movieItemYear");
@@ -20,6 +24,7 @@ const movieItemDeleteNode = document.getElementById("movieItemDelete");
 const DISPLAY_NONE_CLASS = "display-none";
 const RED_CLASS = "red";
 const MOVIE_WATCHED_CLASS = "movie-item__watched-btn--active";
+const NEW_ITEM_WIDTH_0 = "new-item--width0";
 
 const movieList = [];
 
@@ -84,7 +89,6 @@ const clearForm = () => {
 
 const parseCategoryList = () => {
   let optionCategory = document.createElement("option");
-  optionCategory.value = "";
   optionCategory.setAttribute("disabled", "");
   optionCategory.setAttribute("selected", "");
   optionCategory.setAttribute("hidden", "");
@@ -98,8 +102,34 @@ const parseCategoryList = () => {
   });
 };
 
+const parseCountryList = () => {
+  let optionCountry = document.createElement("option");
+  optionCountry.setAttribute("disabled", "");
+  optionCountry.setAttribute("selected", "");
+  optionCountry.setAttribute("hidden", "");
+  optionCountry.innerText = "Country";
+  movieCountryNode.appendChild(optionCountry);
+  data.coutryList.forEach((item, index) => {
+    optionCountry = document.createElement("option");
+    optionCountry.value = index;
+    optionCountry.innerText = item;
+    movieCountryNode.appendChild(optionCountry);
+  });
+};
+
 const init = () => {
   parseCategoryList();
+  parseCountryList();
+};
+
+const newCategoryHandler = () => {
+  newCategoryNode.classList.toggle(NEW_ITEM_WIDTH_0);
+  movieCategoryNode.classList.toggle(NEW_ITEM_WIDTH_0);
+};
+
+const newCountryHandler = () => {
+  newCountryNode.classList.toggle(NEW_ITEM_WIDTH_0);
+  movieCountryNode.classList.toggle(NEW_ITEM_WIDTH_0);
 };
 
 //main programm code
@@ -107,6 +137,9 @@ init();
 addMovieBtnNode.addEventListener("click", openMovieForm);
 cancelAddMovieBtnNode.addEventListener("click", closeMovieForm);
 confirmBtnNode.addEventListener("click", addMovieToList);
-ClearFormBtnNode.addEventListener("click", clearForm);
+clearFormBtnNode.addEventListener("click", clearForm);
+
+newCategoryBtnNode.addEventListener("click", newCategoryHandler);
+newCountryBtnNode.addEventListener("click", newCountryHandler);
 
 console.log();

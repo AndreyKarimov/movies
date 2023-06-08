@@ -140,6 +140,8 @@ option:focus-visible {
     align-items: center;
 }
 
+
+
 .addBtn {
     background-color: inherit;
     width: 40px;
@@ -155,13 +157,35 @@ option:focus-visible {
 .movieYear,
 .confirm-btn,
 .movie-category,
-.movie-country {
+.movie-country,
+.new-item {
     padding-left: 10px;
     width: 100%;
     height: 30px;
     box-sizing: border-box;
     border-radius: 5px;
     border: 1px solid #64748B;
+    transition: all 0.2s ease-in-out;
+}
+
+.add-movie__form-item--wrapper {
+    position: relative;
+    width: 100%;
+    height: 30px;
+}
+
+.movie-category, .movie-country, .new-item {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.new-item--width0 {
+    transform: scaleY(0);
+    height: 0;
+    transition: all 0.2s ease-in-out;
+
+
 }
 
 .red {
