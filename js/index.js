@@ -82,7 +82,28 @@ const clearForm = () => {
       "";
 };
 
+const parseCategoryList = () => {
+  let optionCategory = document.createElement("option");
+  optionCategory.value = "";
+  optionCategory.setAttribute("disabled", "");
+  optionCategory.setAttribute("selected", "");
+  optionCategory.setAttribute("hidden", "");
+  optionCategory.innerText = "Category";
+  movieCategoryNode.appendChild(optionCategory);
+  data.categoryList.forEach((item, index) => {
+    optionCategory = document.createElement("option");
+    optionCategory.value = index;
+    optionCategory.innerText = item;
+    movieCategoryNode.appendChild(optionCategory);
+  });
+};
+
+const init = () => {
+  parseCategoryList();
+};
+
 //main programm code
+init();
 addMovieBtnNode.addEventListener("click", openMovieForm);
 cancelAddMovieBtnNode.addEventListener("click", closeMovieForm);
 confirmBtnNode.addEventListener("click", addMovieToList);

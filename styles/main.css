@@ -134,6 +134,21 @@ option:focus-visible {
 .add-movie__form-item {
     width: 100%;
     height: 30px; 
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.addBtn {
+    background-color: inherit;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-image: url(../resouses/add-movie-btn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
 }
 
 .movieTitle, 
@@ -203,6 +218,7 @@ option:focus-visible {
     border: 1px solid #047857;
     border-radius: 35px;
     background-color: #FFFFFF;
+    cursor: pointer;
 }
 
 .movie-item__watched-btn--active {
