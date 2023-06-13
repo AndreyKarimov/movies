@@ -78,6 +78,12 @@ const addMovieToList = () => {
   }
 
   movieList.push(new Movie(title, year, category, country));
+  if (!data.categoryList.includes(category)) {
+    data.categoryList.push(category);
+  }
+  if (!data.coutryList.includes(country)) {
+    data.coutryList.push(country);
+  }
 
   init();
 };
@@ -90,9 +96,14 @@ const clearForm = () => {
     newCategoryNode.value =
     newCountryNode.value =
       "";
+  newCategoryNode.classList.add(NEW_ITEM_HEIGHT_0);
+  movieCategoryNode.classList.remove(NEW_ITEM_HEIGHT_0);
+  newCountryNode.classList.add(NEW_ITEM_HEIGHT_0);
+  movieCountryNode.classList.remove(NEW_ITEM_HEIGHT_0);
 };
 
 const renderCategoryList = () => {
+  movieCategoryNode.innerHTML = "";
   let optionCategory = document.createElement("option");
   optionCategory.setAttribute("disabled", "");
   optionCategory.setAttribute("selected", "");
@@ -109,6 +120,7 @@ const renderCategoryList = () => {
 };
 
 const renderCountryList = () => {
+  movieCountryNode.innerHTML = "";
   let optionCountry = document.createElement("option");
   optionCountry.setAttribute("disabled", "");
   optionCountry.setAttribute("selected", "");
@@ -207,12 +219,6 @@ const newCountryHandler = () => {
   newCountryNode.classList.toggle(NEW_ITEM_HEIGHT_0);
   movieCountryNode.classList.toggle(NEW_ITEM_HEIGHT_0);
 };
-
-// const movieWatched = (index) => {
-//   const movieItem = movieList[index];
-//   movieItem.watchTogle;
-//   movieWatcedBtn.parentNode.classList.toggle(MOVIE_WATCHED_CLASS);
-// };
 
 //main programm code
 init();
