@@ -217,10 +217,12 @@ option:focus-visible {
 
 
 .movie-list {
+    max-height: 600px;
     width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+    overflow-y: scroll;
 }
 
 
@@ -250,6 +252,10 @@ option:focus-visible {
     background-image: url(../resouses/watched-btn.png);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.movie-item__watched--active {
+    text-decoration: line-through;
 }
 
 .movie-item__desc {

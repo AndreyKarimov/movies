@@ -4,7 +4,11 @@ class Movie {
     this.year = year;
     this.category = category;
     this.country = country;
-    this.watched = 0;
+    this.watched = false;
+  }
+
+  watchTogle() {
+    this.watched = this.watched === true ? false : true;
   }
 }
 
