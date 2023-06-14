@@ -28,10 +28,12 @@ const movieList = data.defaultMovies;
 // functions
 const openMovieForm = () => {
   addMovieFormNode.classList.toggle(DISPLAY_NONE_CLASS);
+  cancelAddMovieBtnNode.classList.toggle(DISPLAY_NONE_CLASS);
 };
 
 const closeMovieForm = () => {
   addMovieFormNode.classList.add(DISPLAY_NONE_CLASS);
+  cancelAddMovieBtnNode.classList.toggle(DISPLAY_NONE_CLASS);
 };
 
 const addMovieToList = () => {
